@@ -55,4 +55,4 @@ document.getElementById("start").addEventListener("click", function() {
 
 document.getElementById("stop").addEventListener("click", function() {
   clearInterval(timer);
-});
+})
