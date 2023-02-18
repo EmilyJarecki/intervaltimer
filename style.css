@@ -1,0 +1,105 @@
+body {
+    margin: 0; 
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.393);
+    color: white
+}
+.circle{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    /* the two colors  */
+    /* what makes it a circle */
+    border-radius: 50%;
+    /* determines when the animation completes */
+    /* animation: animate 1s linear infinite; */
+}
+
+.sum{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+}
+
+.sum-active{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	animation: pulse 1s infinite;
+}
+
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        /* if it were for example 180 it woudl stop at the bottom and 'glitch' to the top */
+        transform: rotate(360deg)
+    }
+}
+
+.circle::after{
+    content: '';
+    /* this puts a 'square' on top of our previous shape */
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;    
+    background-color: black;
+    border-radius: 50%;
+}
+
+.circle span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#33ccff, #ff0066);
+    border-radius: 50%;
+}
+
+.circle span:nth-child(1){
+    filter: blur(5px);
+}
+.circle span:nth-child(2){
+    filter: blur(10px);
+}
+.circle span:nth-child(3){
+    filter: blur(20px);
+}
+/* these children make it increasingly blurry */
+.circle span:nth-child(4){
+    filter: blur(55px);
+}

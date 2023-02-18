@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buttons and Gizmos</title>
     <script src="./main.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-<div id="timer"></div>
+  <body>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
     <div>
       <label>Work Time (sec):</label>
-      <input type="number" id="work-time" value="30">
+      <input type="number" id="work-time" value="30" />
     </div>
     <div>
       <label>Rest Time (sec):</label>
-      <input type="number" id="rest-time" value="10">
+      <input type="number" id="rest-time" value="10" />
     </div>
     <div>
       <label>Number of Intervals:</label>
-      <input type="number" id="num-intervals" value="5">
+      <input type="number" id="num-intervals" value="5" />
     </div>
-</body>
+    <div class="sum" id="sum">
+      <p id="intervalnum">Interval 1</p>
+      <p id="timer">00:00</p>
+    </div>
+
+    <div class="circle">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
 </html>

@@ -19,8 +19,9 @@ function displayTimer() {
   }
           
   // Display the timer in the timer div
-  document.getElementById("timer").innerHTML = "Interval " + currentInterval + ": " + minutes + ":" + seconds;
-  
+  document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+  document.getElementById("intervalnum").innerHTML = "Interval " + currentInterval;
+
   // Switch between workout and rest time
   if (!isResting && interval >= workTime) {
     isResting = true;
@@ -41,18 +42,29 @@ function displayTimer() {
   
   interval++;
 }
+  let bod = document.querySelector(".sum")
+  bod.addEventListener("click", pulse)
+  bod.classList.toggle("sum-active")
+  function pulse(){
+    bod.classList.toggle("sum-active")
+  }
+
 
 document.getElementById("start").addEventListener("click", function() {
   workTime = document.getElementById("work-time").value;
-  restTime = document.getElementById("rest-time").value;
+  restTime = document.getElementById("rest-time").value;  
   numIntervals = document.getElementById("num-intervals").value;
   interval = 0;
   isResting = false;
   currentInterval = 1;
-  document.getElementById("timer").style.color = "black";
+  document.getElementById("timer").style.color = "white";
   timer = setInterval(displayTimer, 1000);
 });
 
 document.getElementById("stop").addEventListener("click", function() {
   clearInterval(timer);
 })
+
+
+
+const button = document.querySelector(".circle")
