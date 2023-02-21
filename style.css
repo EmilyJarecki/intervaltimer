@@ -118,6 +118,7 @@ input {
   display: flex;
   background-color: transparent;
   border: none;
+  z-index: 1000;
 }
 .allinputs {
   display: flex;
@@ -208,4 +209,9 @@ input::placeholder {
   .initiates {
     top: 50px;
   }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
