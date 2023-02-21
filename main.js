@@ -26,11 +26,11 @@ function displayTimer() {
   if (!isResting && interval >= workTime) {
     isResting = true;
     interval = 0;
-    document.getElementById("timer").style.color = "red";
+    document.getElementById("timer").style.color = "#ff0066";
   } else if (isResting && interval >= restTime) {
     isResting = false;
     interval = 0;
-    document.getElementById("timer").style.color = "black";
+    document.getElementById("timer").style.color = "white";
     currentInterval++;
   }
   
@@ -42,12 +42,6 @@ function displayTimer() {
   
   interval++;
 }
-  let bod = document.querySelector(".sum")
-  bod.addEventListener("click", pulse)
-  bod.classList.toggle("sum-active")
-  function pulse(){
-    bod.classList.toggle("sum-active")
-  }
 
 
 document.getElementById("start").addEventListener("click", function() {
@@ -65,6 +59,5 @@ document.getElementById("stop").addEventListener("click", function() {
   clearInterval(timer);
 })
 
-
-
-const button = document.querySelector(".circle")
+const area = document.querySelector("sum")
+area.classList.toggle("sum:active")

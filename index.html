@@ -7,33 +7,52 @@
     <title>Buttons and Gizmos</title>
     <script src="./main.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
-    <div>
-      <label>Work Time (sec):</label>
-      <input type="number" id="work-time" value="30" />
-    </div>
-    <div>
-      <label>Rest Time (sec):</label>
-      <input type="number" id="rest-time" value="10" />
-    </div>
-    <div>
-      <label>Number of Intervals:</label>
-      <input type="number" id="num-intervals" value="5" />
-    </div>
-    <div class="sum" id="sum">
-      <p id="intervalnum">Interval 1</p>
-      <p id="timer">00:00</p>
+    <div class="initiates">
+      <button class="start" id="start">Start</button>
+      <button id="stop">Stop</button>
     </div>
 
-    <div class="circle">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+    <p id="intervalnum">Interval 1</p>
+    <p id="timer">00:00</p>
+    <div class="circle-container">
+      <div class="circle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="allinputs-container">
+      <div class="allinputs">
+        <div class="inputs">
+          <div class="work">
+            <div id="work">
+              <label>Work:</label>
+              <input type="number" id="work-time" value="30" />
+            </div>
+          </div>
+          <div class="rest">
+            <div id="rest">
+              <label>Rest:</label>
+              <input type="number" id="rest-time" value="10" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="interval-container">
+        <label class="num-of-int">Number of Intervals:</label>
+        <div class="intervalnum-cont">
+                  <input type="number" id="num-intervals" value="5" />
+
+        </div>
+      </div>
     </div>
   </body>
 </html>
