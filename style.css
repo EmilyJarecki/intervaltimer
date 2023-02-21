@@ -1,11 +1,17 @@
+html,
+body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: rgb(0, 0, 0);
   color: white;
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
-.circle-container{
+.circle-container {
   display: flex;
   justify-content: center;
 }
@@ -16,10 +22,10 @@ body {
   border-radius: 50%;
   background: linear-gradient(#33ccff, #ff0066);
   animation: animate 1s linear infinite;
-
   top: 100px;
 }
-#timer, #intervalnum{
+#timer,
+#intervalnum {
   color: white;
   position: absolute;
   bottom: 300px;
@@ -31,10 +37,10 @@ body {
   display: flex;
   justify-content: center;
 }
-#timer{
+#timer {
   top: 220px;
 }
-#intervalnum{
+#intervalnum {
   top: 170px;
   font-size: 24px;
 }
@@ -78,14 +84,16 @@ body {
 .circle span:nth-child(4) {
   filter: blur(55px);
 }
-.initiates{
+
+.initiates {
   display: flex;
   justify-content: center;
-  position:absolute;
+  position: absolute;
   width: 100%;
   top: 75px;
 }
-#start, #stop{
+#start,
+#stop {
   color: white;
   background-color: black;
   text-decoration: none;
@@ -97,29 +105,32 @@ body {
   padding: 15px;
   border: 1px solid white;
   margin: 0 150px 0 150px;
-  font-family: 'Barlow Semi Condensed', sans-serif;;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  min-width: 75px;
+  min-height: 75px;
 }
 
-.inputs{
+.inputs {
   display: flex;
 }
-input{
-    justify-content: flex-end;
+input {
+  justify-content: flex-end;
   display: flex;
   background-color: transparent;
   border: none;
 }
-.allinputs{
-  display:flex;
+.allinputs {
+  display: flex;
   justify-content: center;
   margin-top: 100px;
 }
-.interval-container{
+.interval-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.work, .rest {
+.work,
+.rest {
   margin: 0px 130px 0px 130px;
   width: 100px;
   height: 100px;
@@ -129,14 +140,16 @@ input{
   flex-direction: column;
   font-size: 18px;
 }
-label{
+label {
   display: flex;
   justify-content: center;
 }
-#rest, #work{
+#rest,
+#work {
   margin-top: 15px;
 }
-#work-time, #rest-time{
+#work-time,
+#rest-time {
   margin: 0;
   width: 100%;
   height: 50px;
@@ -145,11 +158,11 @@ label{
   font-size: 30px;
   text-align: center;
 }
-input::placeholder{
+input::placeholder {
   border: none;
   text-align: center;
 }
-.interval-container{
+.interval-container {
   display: flex;
   justify-content: center;
 }
@@ -164,12 +177,35 @@ input::placeholder{
   font-size: 30px;
   text-align: center;
 }
-.num-of-int{
-  font-size: 18px;;
+.num-of-int {
+  font-size: 18px;
 }
-.intervalnum-cont{
+.intervalnum-cont {
   display: flex;
   justify-content: center;
   font-size: 30px;
   text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
+  .work,
+  .rest {
+    margin: 0px 50px 0px 50px;
+  }
+  #start,
+  #stop {
+    margin: 0 90px 0 90px;
+    width: 75px;
+    height: 75px;
+  }
+  #timer {
+    top: 200px;
+  }
+  .initiates {
+    top: 50px;
+  }
 }
