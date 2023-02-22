@@ -1,5 +1,6 @@
 html {
   width: auto !important;
+  overflow-y: hidden !important;
   overflow-x: hidden !important;
   position:relative;
 }
@@ -9,6 +10,7 @@ body {
   background-color: rgb(0, 0, 0);
   color: white;
   font-family: "Barlow Semi Condensed", sans-serif;
+  overflow-y: hidden !important;
   width: auto !important;
   overflow-x: hidden !important;
   position:relative;
