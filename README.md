@@ -1,4 +1,4 @@
-# view: <a href="https://roundintervaltimer.netlify.app" >IntervalTimer</a>
+# <a href="https://roundintervaltimer.netlify.app" >IntervalTimer</a>
 
 ## iPhoneSE view
 <img width="901" alt="Screen Shot 2023-02-22 at 9 09 20 AM" src="https://user-images.githubusercontent.com/107048020/221096422-165edf48-4fd8-4b7c-a437-748e8666bd2d.png">
